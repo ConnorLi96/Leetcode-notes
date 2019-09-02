@@ -38,7 +38,17 @@ Explaination: calories[0] + calories[1] > upper,calories[1] + calories[2] =upper
 
 
 **Solution version 1: Time Limited**
-Reason: sum() means another for loop, so there are two for loops in this function, which means the time of calculate will increase exponentially. Thus, when we can delete the first element and add the next element to calculate the sum.
+
+Reason: ```sum()``` means another for loop, so there are two for loops in this function, which means the time of calculate will increase exponentially. Thus, when we can delete the first element and add the next element to calculate the sum.
+
+Here is formula derivation：
+
+```
+The sum of T: [Calories[i] +Calories[i+1] + ... +  Calories[i+k]]
+The sum of T2: [Calories[i+1] + ... +  Calories[i+k] + Calories[i+k+1]]
+
+T2 - T:  Calories[i+k+1] - Calories[i]
+```
 
 ```
 class Solution(object):
