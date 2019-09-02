@@ -47,7 +47,7 @@ Here is formula derivation：
 The sum of T: [Calories[i] +Calories[i+1] + ... +  Calories[i+k]]
 The sum of T2: [Calories[i+1] + ... +  Calories[i+k] + Calories[i+k+1]]
 
-T2 - T:  Calories[i+k+1] - Calories[i]
+T2 - T:  Calories[i+k+1] + Calories[i]
 ```
 
 ```
