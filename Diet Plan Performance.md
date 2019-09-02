@@ -1,4 +1,5 @@
 **Q**
+
 A dieter consumes ```calories[i]``` calories on the i-th day.  For every consecutive sequence of ```k``` days, they look at ```T```, the total calories consumed during that sequence of k days:
 
 If T < ```lower```, they performed poorly on their diet and lose 1 point; 
