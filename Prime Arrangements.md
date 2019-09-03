@@ -31,12 +31,13 @@ Output: 682289015
 **Question Analysis:**
 let's put mod away, reminding consider it at last step. This kind of problems could be classified as permutation problem. According the example 1, the possible permutation examples P as below:
 
-| 一个普通标题 | 一个普通标题 | 一个普通标题 | 一个普通标题 | 
-| ------ | ------ | ------ | ------ |
+| 一个普通标题 | 一个普通标题 | 一个普通标题 |一个普通标题 | 
+| ------ | ------ | ------ |------ |
 | 短文本 | 中等文本 | 稍微长一点的文本 | 稍微长一点的文本 |
 | 稍微长一点的文本 | 短文本 | 中等文本 | 稍微长一点的文本 |
 
 | Possibities| example1| example2 | example3 | example4 |
+| ------ | ------ | ------ | ------ | ------ |
 | permutation | [1,2,3,4,5] | [1,2,3,5,4] | [1,2,5,4,3] | [5,2,3,4,1] | 
 | Index | [1,2,3,4,5] | [1,2,3,4,5] | [1,2,3,4,5] | [1,2,3,4,5] |
 | Work | valid | invalid | valid | invalid |
