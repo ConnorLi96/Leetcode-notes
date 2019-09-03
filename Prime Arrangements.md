@@ -1,4 +1,5 @@
-Return the number of permutations of ```1 to n``` so that prime numbers are at prime indices (1-indexed.)
+**Q:**
+ber of permutations of ```1 to n``` so that prime numbers are at prime indices (1-indexed.)
 
 (Recall that an integer is prime if and only if it is greater than 1, and cannot be written as a product of two positive integers both smaller than it.)
 
@@ -29,18 +30,21 @@ Output: 682289015
 **Question Analysis:**
 let's put mod away, reminding consider it at last step. This kind of problems could be classified as permutation problem. According the example 1, the possible permutation examples P as below:
 
+| 一个普通标题 | 一个普通标题 | 一个普通标题 |
+| ------ | ------ | ------ |
+| 短文本 | 中等文本 | 稍微长一点的文本 |
+| 稍微长一点的文本 | 短文本 | 中等文本 |
+
 | Possibities| example1| example2 | example3 | example4 | ...|
 | permutation | [1,2,3,4,5] | [1,2,3,5,4] | [1,2,5,4,3] |[5,2,3,4,1] | ...|
 | Index | [1,2,3,4,5] | [1,2,3,4,5] | [1,2,3,4,5] |[1,2,3,4,5] | ...|
 | Work | valid | invalid | valid | invalid | ...|
 
-Accroding the table, we get two points:
-
+Depends on the table, we get two points:
 
 
 **Solutions**
 ```
-
 
 ```
 
