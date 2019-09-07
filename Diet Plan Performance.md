@@ -72,6 +72,43 @@ class Solution(object):
 
 
 
-**Solution version 2:**
+**Solution version 2: Time Limited**
 ```
+    def dietPlanPerformance(self,calories, k, lower, upper):   
+        single_score= []
+
+
+
+        for item in [calories[i:i+k] for i in range(0,len(calories))]:
+            if len(item) < k:
+                pass
+
+            elif k==1:
+
+                if item[0] < lower:
+                    single_score.append(-1)
+                if item[0] > upper:
+                    single_score.append(1)
+
+            else:
+                left = 0
+                right = k
+                sum_item = 0
+                for i in item[left:right]:
+                    sum_item = sum_item+i 
+
+
+                left += 1
+                right += 1
+                print(left)
+                print(right)
+                print(sum_item)
+
+                if sum_item < lower:
+                    single_score.append(-1)
+                if sum_item > upper:
+                    single_score.append(1)
+            continue
+
+        return sum(single_score)
 ```
