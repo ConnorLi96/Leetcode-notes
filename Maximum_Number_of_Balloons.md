@@ -4,7 +4,7 @@ Given a string text, you want to use the characters of text to form as many inst
 You can use each character in text at most once. Return the maximum number of instances that can be formed.
 
 
-**Examples**
+**Examples:**
 
 ```
 Input: text = "nlaebolko"
@@ -18,7 +18,7 @@ Input: text = "leetcode"
 Output: 0
 ```
 
-**Solution1**
+**Solution1:**
 
 import counter to calculate the frequency of each character in string, the 'l' and 'n' definitely is the double of other character, so just get min of counter list
 
@@ -29,7 +29,8 @@ return min([c[b],c[a],c[l]//2,c[o]//2, c[n]])
 
 ```
 
-**Solution2**
+**Solution2:**
+
 for loop the all string'balloon', and use the count of each character to calculate min possibilities.
 ```
 from collections import Counter 
@@ -50,6 +51,7 @@ class Solution:
 ```
 
 
-**Conclusion**
+**Conclusion:**
+
 Think this kind of problems by get the min of possibilities.
 
