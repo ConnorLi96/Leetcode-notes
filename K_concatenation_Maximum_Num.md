@@ -47,4 +47,5 @@ class Solution(object):
             return 0
 ```
 
-Reasons: The first func "max_arr" is wrong, if there are more than one negative number between positive number, you need get the sigle max one.
+Reasons: The first func "max_arr" is wrong, if there are more than one negative number between positive number, you need get the single max one. This kind of problem can be summarized as ```max of sub_array``` 
+
