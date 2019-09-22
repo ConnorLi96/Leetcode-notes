@@ -1,4 +1,4 @@
-**Q**
+**Questions**
 
 A dieter consumes ```calories[i]``` calories on the i-th day.  For every consecutive sequence of ```k``` days, they look at ```T```, the total calories consumed during that sequence of k days:
 
