@@ -23,9 +23,9 @@ Output: 682289015
 
 
 **Knowledge points:**
-- jiecheng
+- factorial
 - prime
-- mod
+- permutation 
 
 
 **Question Analysis:**
