@@ -51,7 +51,8 @@ class Solution:
 ```
 
 
-**Conclusion:**
+**KNOWLEDGE POINTS:**
 
-Think this kind of problems by get the min of possibilities.
-
+- Think this kind of problems by get the min of possibilities.
+- public value problem, try get a condition that can meet the need of QUESTION, then get the min of this conditions, [1,1,1,2,2] is the public condition, the min of possibilities is ans
+- Counter function 
