@@ -49,3 +49,13 @@ class Solution(object):
 
 Reasons: The first func "max_arr" is wrong, if there are more than one negative number between positive number, you need get the single max one. This kind of problem can be summarized as ```max of sub_array``` 
 
+**KNOWLEDGE POINTS**
+
+- get the maximum of subarray 
+```
+ans = cur = 0
+for i in arr:
+    cur += n
+    max(cur, 0)
+    max(cur, m)
+```
