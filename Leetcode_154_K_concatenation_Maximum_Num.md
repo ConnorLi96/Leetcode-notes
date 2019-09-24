@@ -23,6 +23,17 @@ Input: arr = [-1,-2], k = 7
 Output: 0
 ```
 
+**KNOWLEDGE POINTS**
+
+- get the maximum of subarray 
+```
+def max_sub(arr):
+    ans = cur = 0
+    for i in arr:
+        cur += n
+    cur = max(cur, 0)
+    m = max(cur, m)
+```
 
 **Solutions1 Wrong Answer:**
 
@@ -49,13 +60,60 @@ class Solution(object):
 
 Reasons: The first func "max_arr" is wrong, if there are more than one negative number between positive number, you need get the single max one. This kind of problem can be summarized as ```max of sub_array``` 
 
-**KNOWLEDGE POINTS**
 
-- get the maximum of subarray 
+**Solution2 TLE**
+
 ```
-ans = cur = 0
-for i in arr:
-    cur += n
-    max(cur, 0)
-    max(cur, m)
+class Solution(object):
+    def kConcatenationMaxSum(self, arr, k):
+        def maxsub(arr):
+            m = cur = 0
+            for n in arr:
+                cur += n # cur is the current sum 
+                cur = max(cur, 0) # in case the 0 condition
+                m = max(m, cur) # m once added next element, contrast the current sum and max_sum
+            return m  
+
+
+        mod = 10**9 + 7
+        m1 = maxsub(arr)
+        m2 = maxsub(arr+arr)
+
+        if k == 1:
+            return m1 % mod 
+        elif k == 2:
+            return m2 % mod 
+        else:
+            return maxsub(arr * k) % mod 
 ```
+Reasons: ```return maxsub(arr * k) % mod ``` means O(n) complexitity, but if the k is very large, this range of array would be very long. So we can get the sum of single array, Multiply it with k, and plus the m1 or m2, like the solution below.
+
+**Solution3**
+```
+class Solution(object):
+    def kConcatenationMaxSum(self, arr, k):
+        def maxsub(arr):
+            m = cur = 0
+            for n in arr:
+                cur += n # cur is the current sum 
+                cur = max(cur, 0) # in case the 0 condition
+                m = max(m, cur) 
+            return m  
+
+
+        mod = 10**9 + 7
+        m1 = maxsub(arr)
+        m2 = maxsub(arr+arr)
+        sum_single = sum(arr)
+        
+        if k == 1:
+            return m1 % mod 
+        elif k == 2:
+            return m2 % mod 
+        elif sum_single >0:
+            return max((m1 + (k-1)*sum_single),(m2 + (k-2)*sum_single)) % mod
+        else:
+            return max(m1,m2)
+
+```
+
