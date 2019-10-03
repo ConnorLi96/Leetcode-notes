@@ -1,5 +1,6 @@
 **Questions**
-Given a string s, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them causing the left and the right side of the deleted substring to concatenate together.
+
+Given a string ```s```, a ```k``` duplicate removal consists of choosing k adjacent and equal letters from s and removing them causing the left and the right side of the deleted substring to concatenate together.
 
 We repeatedly make k duplicate removals on s until we no longer can.
 
@@ -24,13 +25,14 @@ Finally delete "ddd", get "aa"
 Input: s = "pbbcggttciiippooaais", k = 2
 Output: "ps"
 ```
+
 **KNOELEDGEMENT POINT**
 - STACK
     - put the char in stack and set the count of char as 1
     - if the last one, stack ```[-1]``` is equal to the next char, then the count += 1, until count == ```k```, and then remove this char.
     - else, keep put char in stack
 
-**Solutions**
+**Solution**
 ```
 stk = []
 for item in s:
@@ -41,6 +43,4 @@ for item in s:
         if stk[-1][1] == k:
             stk.pop()
 return "".join(item * index for item, index in stk) 
-
 ```
-
