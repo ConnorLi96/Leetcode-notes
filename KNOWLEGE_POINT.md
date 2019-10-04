@@ -17,6 +17,10 @@
 ### reverse string 
  
 ### Counter
+**The Best Counter Algorthim**
+```
+https://blog.csdn.net/sunshine__0411/article/details/80792970
+```
 
 ### Factorial
 **Factorial implementation in Python**
