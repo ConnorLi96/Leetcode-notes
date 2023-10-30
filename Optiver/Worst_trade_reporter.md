@@ -76,14 +76,10 @@ NO BAD TRADES
 1
 4
 
-```
-Class PnLCalculator:
-```
 
 
 **Examples**
 ```
-
 class Trader():
     def __init__(self):
         self.prices = {}
